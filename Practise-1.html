@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic design</title>
+    <style type="text/css">
+        body{
+            background-color: rgb(26, 226, 26);
+            
+        }
+        h1{
+            background-color:burlywood ;
+            text-align:center;
+            color:maroon;
+            border:5px darkblue;
+            border-style: solid;
+        }
+        h2{
+            background-color: darkcyan;
+            text-align:center;
+            color:maroon;
+            border:5px darkmagenta;
+            border-style: solid;
+        }
+        .paragraph{
+            background-color: moccasin;
+            font-size: 2rem;
+            color:navy;
+            border:6px darkred;
+            border-style: solid;
+            padding: 5px 8px;
+        }
+        #division{
+            background-color: aquamarine;
+            border:5px darkred;
+            border-style: solid;
+            padding: 5px 8px;
+        }
+        #division h1{
+            background-color: burlywood;
+            text-align: center;
+            color:maroon;
+            border:5px darkslategrey;
+            border-radius: 5px;
+            border-style: solid;
+        }
+        #division p{
+            color:black;
+            font-size: 2rem;
+            border: 4px darkslateblue;
+            border-radius: 5px;
+            border-style: solid;
+            padding:6px 6px;
+        }
+        .mystyle{
+            background-color: blanchedalmond;
+            color:navy;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: initial;
+            border:5px red;
+            border-radius: 5px;
+            border-style: solid;
+            padding:6px 6px;
+        }
+        .align{
+            border:5px orangered solid;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .decoration{
+            text-indent: justify;
+            text-transform: initial;
+            font-size: 200%;
+            text-shadow:3px 3px gray;
+            border:5px orangered solid;
+            border-radius: 5px;
+            padding:6px 6px;
+            color:darkred;
+        }
+        .part{
+            text-align: center;
+            border:5px firebrick solid;
+            color:maroon;
+            font-size: 2rem;
+            background-color: aquamarine;
+            font-weight: bold;
+            margin:auto;
+        }
+        span{
+            color:rgb(196, 21, 77);
+        }
+        #section1{
+        background-color: aquamarine;
+        width:1000px;
+        height: 100px;
+        padding:20px;
+        border:5px darkviolet solid;
+        margin:auto;
+        }
+        .element1{
+            max-width:700px;
+            margin:auto;
+            border:5px black solid;
+            background-color: azure;
+            font-size: 1.5rem;
+            padding: 2px 2px;
+        }
+        div::first-line{
+            color: maroon;
+        }
+        input{
+            width:700px;
+            padding:10px;
+            font-size:2rem;
+        }
+        input:hover{
+            background-color: aqua;
+        }
+        input:focus{
+            background-color: gold;
+        }
+        input::placeholder{
+           color:blueviolet;
+        }
+        a.mylink:hover{
+            color: brown;
+            font-size: 2rem;
+        }
+        .demo{
+            background-color: whitesmoke;
+            border:5px orangered solid;
+            border-radius: 5px;
+            padding:6px 6px;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .demo p:nth-child(1){
+            color:brown;
+            background-color: greenyellow;
+            border:5px black dotted;
+        }
+        .demo p:nth-child(2){
+            color:brown;
+            background-color:greenyellow;
+            border:5px black dotted;
+        }
+        li:nth-child(even){
+            color:brown;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        li:nth-child(odd){
+            color:indigo;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .abstract{
+            background-color: turquoise;
+            font-size: 1.5rem;
+            border:5px black solid;
+            padding: 5px 8px;
+        }
+        .abstract::before{
+            width:100%;
+            height:30px;
+            content: 'Minhaz';
+            text-align: center;
+            display:inline-block;
+            background-color:orange; 
+        }
+        .abstract::after{
+            width:100%;
+            height:30px;
+            content: 'Arnob';
+            text-align: center;
+            display:inline-block;
+            background-color: orange;
+        }   
+    </style>
+</head>
+<body>
+    <h1>Industry is the key to success</h1>
+
+    <h2 style="background-color: burlywood; text-align: center;">I am interested in web developing</h2>
+
+    <p class="paragraph"> 
+        Web development involves creating and maintaining websites, 
+        encompassing everything from designing the user interface to 
+        coding the functionality behind the scenes. It's a dynamic field 
+        where developers use various programming languages, frameworks, 
+        and tools to build websites that are functional,visually appealing.
+        From simple static pages to complex web applications,web developers 
+        play a crucial role in shaping the online landscape,ensuring 
+        seamless user experiences across different devices and platforms.
+    </p>
+    <div id="division">
+        <h1>This is my paragraph</h1>
+
+        <p> Web development involves creating and maintaining websites, 
+            encompassing everything from designing the user interface to 
+            coding the functionality behind the scenes. It's a dynamic field 
+            where developers use various programming languages, frameworks, 
+            and tools to build websites that are functional,visually appealing.
+            From simple static pages to complex web applications,web developers 
+            play a crucial role in shaping the online landscape,ensuring seamless 
+            user experiences across different devices and platforms.CSS, which stands 
+            for Cascading Style Sheets, is a fundamental component of web development. 
+            It's a style sheet language used to define the visual presentation of HTML.
+        </p>
+    </div>
+    <p class="mystyle">
+        Web development involves creating and maintaining websites, 
+        encompassing everything from designing the user interface to 
+        coding the functionality behind the scenes. It's a dynamic field 
+        where developers use various programming languages, frameworks, 
+        and tools to build websites that are functional and user-friendly.
+    </p>
+    <div>
+        <h1 class="align">This is Bangladesh</h1>
+        <p class="decoration">
+            Web development involves creating and maintaining websites, 
+            encompassing everything from designing the user interface to 
+            coding the functionality behind the scenes. 
+        </p>
+    </div>
+
+    <div id="section1">
+        <h1>I want to go rajshahi</h1>
+    </div><br><br>
+
+    <p class="part"> I <span>❤</span> My Country </p><br><br>
+
+    <div class="element1">
+        Bangladesh, a vibrant South Asian nation nestled between India and Myanmar, 
+        is a land of rich cultural heritage and natural beauty. With a population 
+        exceeding 160 million, it's one of the most densely populated countries globally. 
+        Dhaka, the capital city, its streets bustling with rickshaws and vibrant markets. 
+    </div><br>
+
+    <input type="text" placeholder="Enter your name" color="black" style="font-size: 1.5rem;">
+
+    <div style="text-align: center;font-size: 1.8rem;">
+    <a class="mylink" href="https://www.facebook.com/minhaz.arnob.7">Minhaz Arnob</a>
+    </div> 
+    
+    <div class="demo">
+        <p>The country's landscape is diverse, encompassing lush greenery</p>
+        <p>fertile plains crisscrossed by rivers like the mighty Brahmaputra</p>
+    </div><br><br>
+    <ol>
+        <li>Dhaka</li>
+        <li>Mymensingh</li>
+        <li>Khulna</li>
+        <li>Rajshai</li>
+    </ol>
+
+    <p class="abstract">
+        Despite facing challenges like poverty and natural disasters, 
+        Bangladeshis exhibit resilience and warmth, their culture steeped 
+        in traditions of music, dance, and a love for cricket. Bangladesh's 
+        journey from its tumultuous past to its present as a growing economy
+        reflects a story of perseverance and hope. 
+    </p>
+</body>
+</html>

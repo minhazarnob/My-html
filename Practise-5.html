@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mylaptop.css">
+    <link rel="stylesheet" href="MyMobile.css">
+    <title>Responsive web</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        /*@media only screen and (max-width:992px) {
+            body{
+                background-color: chocolate;
+            }
+            h1{
+                color:darkgreen;
+            }
+            h2{
+                color:darkmagenta;
+            }
+        }
+        @media only screen and (max-width:600px) {
+            body{
+                background-color: cornflowerblue;
+            }
+            h1{
+                color:darkred;
+            }
+            h2{
+                color:darkslategray;
+            }
+        }*/
+        .menu{
+            background-color: darkseagreen;
+            display:flex;
+            justify-content: center;
+        }
+        .menu > a{
+            text-decoration: double;
+            padding:5px;
+            color:green;
+            border:3px black solid;
+            margin:8px 5px;
+            text-align:center;
+            border-radius: 5px;
+        }
+        .menu > a:hover{
+           background-color: yellow;
+        }
+        @media only screen and (max-width:600px){
+            .menu{
+                flex-direction: column;
+            }
+            .menu > a{
+                border:5px darkgreen solid;
+                margin: 8px 5px;
+                text-align: center;
+                border-radius: 5px;
+            }
+        }
+        /*.column{
+            float:right;
+            width:25%;
+            padding:5px 5px;
+        }
+        @media only screen and (max-width:992px){
+            .column{
+                float:left;
+                width:50%;
+            }
+        }
+        @media only screen and (max-width:600px){
+            .column{
+                float:left;
+                width:100%;
+            }
+        }*/
+        .row{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .column{
+            flex:25%;
+            padding:10px;
+        }
+        @media only screen and (max-width:992px){
+           .column{
+            flex:50%;
+           } 
+        }
+        @media only screen and (max-width:992px){
+           .row{
+            flex-direction: column;
+           } 
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Hello Bangladesh</h1>
+    <h2>Responsive web designing</h2>
+    <p>
+        Mymensingh, a city steeped in history and culture, 
+        lies in the heart of Bangladesh, cradled between the 
+        Brahmaputra and Old Brahmaputra rivers. This vibrant 
+        urban center serves as a melting pot of tradition and 
+        modernity, where age-old customs blend seamlessly with 
+        contemporary life. 
+    </p><br>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Tutorial</a>
+        <a href="#">About me</a>
+        <a href="#">Contact me</a>
+    </div><br>
+
+    <div  class="row">
+        <div class="column">
+            <h1>HTML</h1>
+            <p>Mymensingh, a city steeped in history and culture, 
+               lies in the heart of Bangladesh, cradled between the 
+               Brahmaputra and Old Brahmaputra rivers.
+            </p>
+        </div>
+        <div class="column">
+            <h1>CSS</h1>
+            <p>Mymensingh, a city steeped in history and culture, 
+               lies in the heart of Bangladesh, cradled between the 
+               Brahmaputra and Old Brahmaputra rivers.
+            </p>
+        </div>
+        <div class="column">
+            <h1>Javascript</h1>
+            <p>Mymensingh, a city steeped in history and culture, 
+               lies in the heart of Bangladesh, cradled between the 
+               Brahmaputra and Old Brahmaputra rivers.
+            </p>
+        </div>
+        <div class="column">
+            <h1>Bookstrap</h1>
+            <p>Mymensingh, a city steeped in history and culture, 
+               lies in the heart of Bangladesh, cradled between the 
+               Brahmaputra and Old Brahmaputra rivers.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

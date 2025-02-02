@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+    <style>
+        
+        .item1{grid-area: Header;}
+        .item2{grid-area: Menu;}
+        .item3{grid-area: Main;}
+        .item4{grid-area: Aside;}
+        .item5{grid-area: Footer;}
+
+        .grid-container1{
+            display:grid;
+            grid-template-columns: 100px auto auto ;
+            grid-template-rows: 60px auto auto;
+            /*justify-content: center,start,end;*/
+             
+        }
+        /*Design grid-item*/
+        .grid-container1 > div{
+           background-color: cornflowerblue;
+           border:3px black solid;
+           text-align:center;
+           padding: 5px 5px;
+         /*grid-column-gap:10px;
+           grid-row-gap:10px
+           grid-gap:10px 10px*/
+        }
+        .grid-container2{
+            display:grid;
+            grid-template-columns: 100px auto auto ;
+            grid-template-rows: 60px auto auto; 
+        }
+        .grid-container2 > div{
+           background-color: cornflowerblue;
+           border:3px black solid;
+           text-align:center;
+           padding: 5px 5px;
+        }
+        .item{
+          /*grid-column-start: 1;
+            grid-column-end: 4;*/
+          /*grid-row-start: 1;
+            grid-row-end: 4;*/
+            grid-column: 1/3;
+            grid-row:1/3;
+
+        }
+        .grid-container3{
+            display:grid;
+            /*grid-template-columns: auto auto auto auto auto;*/
+            grid-template-areas:
+            'Header Header Header Header'
+            'Menu    Main   Main   Aside'
+            'Footer Footer Footer Footer' 
+            
+            ;
+        }
+        .grid-container3 > div{
+           background-color: cornflowerblue;
+           border:3px black solid;
+           text-align:center;
+           padding: 5px 5px;
+        }
+        /*.item1{
+            grid-column: 1/5;
+        }
+        .item2{
+            grid-column: 1/2;
+        }
+        .item3{
+            grid-column: 2/4;
+        }
+        .item4{
+            grid-column: 4/5;
+        }
+        .item5{
+            grid-column: 1/5;
+        }*/
+        .grid-container4{
+            display:grid;
+          /*grid-template-columns:auto auto auto auto auto ;*/
+          /*grid-template-columns:20%  20%  20%  20%  20%;*/
+          /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
+          /*grid-template-columns:repeat(5,20%);*/
+            grid-template-columns:repeat(auto-fill, minmax(300px,20%)) ;
+          
+        }
+        .grid-container4 > div{
+            border: 3px darkslategray solid;
+            padding:5px 5px;
+        }
+        .grid-container5{
+            /*height:100vh(vertical height)*/
+            box-sizing: border-box;
+            background-color: darkorchid;
+            border: 3px darkorchid;
+            display:grid;
+            grid-template-rows: min-content auto min-content;
+            grid-template-areas: 
+            'part1'
+            'part2'
+            'part2'
+            'part2'
+            'part3'
+            ;
+        }
+        header{
+            grid-area:part1;
+            background: hotpink;
+            width:100%;
+            text-align: center;
+            border:solid;
+        }
+        main{
+            grid-area:part2;
+            width: 100%;
+            height:100%;
+            background-color: coral;
+            text-align: center;
+        }
+        article{
+            display:grid;
+            grid-template-areas: 
+            'S1 A1'
+            'S2 A2'
+            'S3  .' ;
+            height: 100%;
+        }
+        section{
+            border:solid;
+
+        }
+        aside{
+            background-color: honeydew;
+            border:solid;
+        }
+        footer{
+            display:grid;
+            grid-area:part3;
+            width:100%;
+            border:solid;
+            text-align: center;
+            grid-template-areas: 'N1';
+        }
+        #sec1{grid-area: S1;}
+        #sec2{grid-area: S2;}
+        #sec3{grid-area: S3;}
+
+        #Aside1{grid-area: A1;}
+        #Aside2{grid-area: A2;}
+
+        #nav1{grid-area: N1;}
+    </style>
+</head>
+<body>
+    <div class="grid-container1">
+        <div>Khulna</div>
+        <div>Shylet</div>
+        <div>Rangpur</div>
+        <div>Barishal</div>
+        <div>Rajshahi</div>
+        <div>Mymensingh</div>
+        <div>Chottogram</div>
+        <div>Dhaka</div>
+        <div>Pabna</div>
+    </div><br>
+    <div class="grid-container2">
+        <div class="item">Header</div>
+        <div>Menu</div>
+        <div>Main</div>
+        <div>Aside</div>
+        <div>Footer</div>
+    </div><br>
+    <div class="grid-container3">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>
+        <div class="item4">Aside</div>
+        <div class="item5">Footer</div>
+    </div><br>
+    <div class="grid-container4">
+        <div>
+            <p>
+            Mymensingh, a city steeped in history and culture, 
+            lies in the heart of Bangladesh, cradled between the 
+            Brahmaputra and Old Brahmaputra rivers. This vibrant 
+            urban center serves as a melting pot of tradition and 
+            modernity, where age-old customs blend seamlessly with 
+            contemporary life. 
+            </p>
+        </div>
+        <div>
+            <p>
+            Mymensingh, a city steeped in history and culture, 
+            lies in the heart of Bangladesh, cradled between the 
+            Brahmaputra and Old Brahmaputra rivers. This vibrant 
+            urban center serves as a melting pot of tradition and 
+            modernity, where age-old customs blend seamlessly with 
+            contemporary life.
+            </p>
+        </div>
+        <div>
+            <p>
+            Mymensingh, a city steeped in history and culture, 
+            lies in the heart of Bangladesh, cradled between the 
+            Brahmaputra and Old Brahmaputra rivers. This vibrant 
+            urban center serves as a melting pot of tradition and 
+            modernity, where age-old customs blend seamlessly with 
+            contemporary life.
+            </p>
+        </div>
+        <div>
+            <p>
+            Mymensingh, a city steeped in history and culture, 
+            lies in the heart of Bangladesh, cradled between the 
+            Brahmaputra and Old Brahmaputra rivers. This vibrant 
+            urban center serves as a melting pot of tradition and 
+            modernity, where age-old customs blend seamlessly with 
+            contemporary life.
+            </p>
+        </div>
+        <div>
+            <p>
+            Mymensingh, a city steeped in history and culture, 
+            lies in the heart of Bangladesh, cradled between the 
+            Brahmaputra and Old Brahmaputra rivers. This vibrant 
+            urban center serves as a melting pot of tradition and 
+            modernity, where age-old customs blend seamlessly with 
+            contemporary life.
+        </p>
+        </div>
+    </div><br>
+
+    <div class="grid-container5">
+        <header>
+            <nav>Header Navigation</nav>
+        </header>
+        <main>
+            <article>
+                <section id="sec1">Section1</section>
+                <section id="sec2">Section2</section>
+                <section id="sec3">Section3</section>
+
+                <aside id="aside1">Aside1</aside>
+                <aside id="aside2">Aside2</aside>
+            </article>
+        </main>
+        <footer>
+           <nav id="nav1">Navigation1</nav> 
+        </footer>
+
+
+    </div>
+    
+</body>
+</html>
